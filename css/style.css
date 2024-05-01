@@ -1,0 +1,144 @@
+/* 根元素的自定義屬性，可以在全局範圍內輕鬆改變設計的顏色、尺寸等 */
+:root {
+  --font_family: 'Inter', sans-serif; /* 整個設計的字體 */
+  --font_size: 16px; /* 基礎字體大小 */
+  --background_color: #000; /* 預設背景顏色 */
+  --background_image: url("../img/wallpaper.png"); /* 背景圖片 */
+  --image_border_color: #000; /* 圖片邊框顏色 */
+  --image_border_px: 3px; /* 圖片邊框厚度 */
+  --image_width: 200px; /* 圖片寬度 */
+  --image_height: 200px; /* 圖片高度 */
+  --title_color: rgb(139, 72, 72); /* 標題文字顏色 */
+  --description_color: #ebaa31; /* 描述文字顏色 */
+  --svg_color: darkseagreen; /* SVG 圖標顏色 */
+  --menu_background_color: transparent; /* 導航菜單背景顏色 */
+  --menu_text_color: rgb(196, 162, 162); /* 導航菜單文字顏色 */
+  --menu_active_text_color: #f1c40f; /* 導航菜單活動狀態時的文字顏色 */
+  --menu_border_color: rgb(196, 162, 162); /* 導航菜單邊框顏色 */
+  --menu_border_px: 3px; /* 導航菜單邊框厚度 */
+  --footer_background_color: darkseagreen; /* 頁腳背景顏色 */
+  --footer_text_color: #fff; /* 頁腳文字顏色 */
+  --footer_link_text_color: #f1c40f; /* 頁腳連結文字顏色 */
+}
+
+/* 基本體樣式 */
+body {
+  font: var(--font_size) var(--font_family); /* 使用變數設定字體和大小 */
+  font-weight: 400; /* 字體粗細 */
+  line-height: 1.5; /* 行高 */
+  background: var(--background_color) var(--background_image) no-repeat center; /* 設定背景顏色和圖片 */
+  min-height: 100vh; /* 最小高度為視窗的高度 */
+  display: flex; /* 使用Flexbox布局 */
+  flex-direction: column; /* 子元素垂直排列 */
+  flex-wrap: wrap; /* 允許子元素換行 */
+}
+
+/* Flexbox 布局的基本設定 */
+.flex_column_center {
+  display: flex; /* 啟用Flexbox */
+  flex-direction: column; /* 子元素垂直排列 */
+  justify-content: center; /* 主軸對齊方式 */
+  align-items: center; /* 交叉軸對齊方式 */
+}
+
+.flex_row_center {
+  display: flex; /* 啟用Flexbox */
+  flex-direction: row; /* 子元素水平排列 */
+  justify-content: center; /* 主軸對齊方式 */
+  align-items: center; /* 交叉軸對齊方式 */
+}
+
+.flex_no_wrap_row_center {
+  display: flex; /* 啟用Flexbox */
+  flex-direction: row; /* 子元素水平排列 */
+  justify-content: center; /* 主軸對齊方式 */
+  align-items: center; /* 交叉軸對齊方式 */
+}
+
+/* Logo、標題和描述的樣式 */
+.header_img {
+  padding-top: 1em; /* 上邊距 */
+}
+
+.header_img img {
+  height: var(--image_height); /* 圖片高度 */
+  width: var(--image_width); /* 圖片寬度 */
+  border: var(--image_border_px) solid var(--image_border_color); /* 圖片邊框 */
+  border-radius: 50%; /* 圓形圖片 */
+  margin-bottom: 0.5em; /* 下邊距 */
+}
+
+.header_text h1 {
+  color: var(--title_color); /* 標題顏色 */
+  font-size: 2em; /* 字體大小 */
+}
+
+.header_text h2 {
+  color: var(--description_color); /* 描述文字顏色 */
+  font-size: 1.3em; /* 字體大小 */
+}
+
+/* 社交媒體圖標樣式 */
+.header_svg_list {
+  padding-top: 1em; /* 上邊距 */
+}
+
+.header_svg_item {
+  width: 3em; /* 寬度 */
+  height: 3em; /* 高度 */
+  cursor: pointer; /* 鼠標樣式 */
+}
+
+.header_svg_item:hover {
+  transform: scale(1.10); /* 滑鼠懸停時放大 */
+  transition: 0.10s ease; /* 過渡效果 */
+}
+
+.header_svg_item + .header_svg_item {
+  margin-left: 1em; /* 左邊距 */
+}
+
+.header_svg_item svg {
+  fill: var(--svg_color); /* 填充顏色 */
+}
+
+/* 導航菜單樣式 */
+
+#header_nav_menu_item_1,
+#header_nav_menu_item_2,
+#header_nav_menu_item_3 {
+  width: 9em;
+  color: var(--menu_text_color);
+  border: var(--menu_border_px) solid var(--menu_border_color);
+}
+
+.header_nav_menu_list {
+  margin-left: 1em; /* 左邊距 */
+  margin-right: 1em; /* 右邊距 */
+}
+
+.header_nav_menu_item {
+  color: var(--menu_text_color); /* 文字顏色 */
+  background-color: var(--menu_background_color); /* 背景顏色 */
+  text-align: center; /* 文字居中 */
+  list-style-type: none; /* 移除列表標記 */
+  cursor: pointer; /* 鼠標樣式 */
+  padding: 0.5em; /* 內邊距 */
+  border-radius: 0.3em; /* 邊框圓角 */
+  transition: 0.10s ease; /* 過渡效果 */
+  font-size: 1.1em; /* 字體大小 */
+  margin: 1em; /* 外邊距 */
+}
+
+/* 頁腳樣式 */
+.footer_div_item {
+  color: var(--footer_text_color); /* 文字顏色 */
+  background: var(--footer_background_color); /* 背景顏色 */
+  padding: 1em; /* 內邊距 */
+  margin-top: 1.5em; /* 上邊距 */
+}
+
+.footer_a_item {
+  color: var(--footer_link_text_color); /* 連結顏色 */
+  text-decoration: none; /* 移除底線 */
+}

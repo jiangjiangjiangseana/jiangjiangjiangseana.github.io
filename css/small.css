@@ -1,0 +1,184 @@
+   
+:root {
+
+  /* Set sans-serif & mono fonts */
+  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica,
+    "Helvetica Neue", sans-serif;
+  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+
+  --header-bg: #d19696;
+  --bg: white;
+  --nav: #b99797;
+  --box-bg:#d8bebe;
+  --text: #dcdcdc;
+  --text-light: #ababab;
+  --border: #666;
+  --image_border_color: #666;
+  --image_border_px: 2px;
+  --image_width: 100px;
+  --image_height: 100px;
+  --title-text: rgb(212, 91, 91);
+  --description-text: rgb(161, 120, 120);
+
+}
+  
+  html {
+    /* Set the font globally */
+    font-family: var(--sans-font);
+    scroll-behavior: smooth;
+  }
+  
+  /* Make the body a nice central block */
+  body {
+    background: var(--bg);
+    font-size: 1.15rem;
+    line-height: 1.5;
+    display: grid;
+    grid-template-areas:
+      "A A"
+      "B B"
+      "B B"
+      "B B";
+    margin: 0;
+  }
+
+  /* Fix line height when title wraps */
+  h1,
+  h2,
+  h3 {
+    line-height: 1.1;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    background-color: var(--header-bg);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    border-bottom:var(--border) 1px solid;
+    grid-area: A;
+    z-index: 100; /******我加的*******/
+  }
+
+  .header_img img {
+    height: var(--image_height);
+    width: var(--image_width);
+    border: var(--image_border_px) solid var(--image_border_color);
+    border-radius: 50%;
+    margin: 1em;
+  }
+
+  .icon {
+    vertical-align: sub;
+    padding-right: 0.25rem;
+    display: inline-block;
+    width: 1em;
+    height: 1.3em;
+    margin-right: 0.2rem;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+  main {
+    top: 8em;
+    padding-left: 50%;/******我加的*******/
+    display:grid;
+    text-align: center;
+    grid-template-columns: 18em auto;
+    padding-top: 1.5rem;
+    grid-area: B;
+  }
+  
+  .side-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 18em;
+    height: 100%;
+    background-color: var(--header-bg);
+    border-right: 1px solid var(--border);
+    position: fixed; /* 將側邊導航欄固定在頁面上 */ /******我加的*******/
+    left: 0; /* 將導航欄固定在頁面的最左側 */ /******我加的*******/
+    top: 8em; /* 將導航欄固定在頁面的 9em 下方 */ /******我加的*******/
+  }
+
+/* Format navigation */
+nav {
+  font-size: 1rem;
+  line-height: 2;
+  padding: 1rem 0 0 0;
+}
+
+nav a,
+nav a:visited {
+    width: 150px;
+    height: 50px;
+    margin: 0 1rem 1rem 0;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--text);
+    display: inline-block;
+    padding: 0.1rem 1rem;
+    text-decoration: none;
+  }
+
+.side-nav nav a,
+.side-nav nav a:visited {
+  width: 200px;
+}
+
+nav a:hover {
+  color: #ffb300;
+  border-color: #ffb300;
+}
+  
+
+.content {
+  padding: 1em;
+  border-bottom: #666 1px solid;
+  display: flex; /* 使用 flex 布局 */
+  flex-wrap: wrap;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+.sector {
+  margin-bottom: 8em;
+}
+
+strong {
+  scroll-margin-top: 8em;
+  color: var(--title-text);
+  font-size: larger;
+  border-bottom: var(--description-text) 3px dashed;
+  border-top: var(--description-text) 3px dashed;
+}
+
+.box {
+  width: 700px;
+  background-color: var(--box-bg);
+  border: var(--image_border_px) solid var(--image_border_color);
+  margin-top: 2em;
+  grid-template-rows: 80% 10% 10%;
+}
+
+
+.photo-box img, .youtube-box iframe, .ppt-box iframe {
+  width: 80%;
+  margin: 20px;
+}
+
+.title {
+  color: var(--title-text);
+}
+
+.description {
+  color: var(--description-text);
+  overflow: auto;
+}
+  
