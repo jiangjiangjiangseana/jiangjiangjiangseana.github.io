@@ -6,22 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="JaclynChiang">
-    <title>Jaclyn Chiang</title>
-    <!-- Preloader -->
+    <title>Contact - Jaclyn Chiang</title>
+
     <style>
         @keyframes hidePreloader {
-            0% {
-                width: 100%;
-                height: 100%;
-            }
-
-            100% {
-                width: 0;
-                height: 0;
-            }
+            0% { width: 100%; height: 100%; }
+            100% { width: 0; height: 0; }
         }
-
-        body>div.preloader {
+        body > div.preloader {
             position: fixed;
             background: white;
             width: 100%;
@@ -35,402 +27,117 @@
             align-items: center;
             justify-content: center;
         }
-
-        body:not(.loaded)>div.preloader {
-            opacity: 1;
-        }
-
-        body:not(.loaded) {
-            overflow: hidden;
-        }
-
-        body.loaded>div.preloader {
-            animation: hidePreloader .5s linear .5s forwards;
-        }
+        body:not(.loaded) > div.preloader { opacity: 1; }
+        body:not(.loaded) { overflow: hidden; }
+        body.loaded > div.preloader { animation: hidePreloader .5s linear .5s forwards; }
     </style>
     <script>
         window.addEventListener("load", function() {
-            setTimeout(function() {
-                document.querySelector('body').classList.add('loaded');
-            }, 300);
+            setTimeout(() => { document.body.classList.add('loaded'); }, 300);
         });
     </script>
-    <!-- Favicon -->
-    <link rel="icon" href="assets/img/brand/logo_tree.png" type="image/png"><!-- Font Awesome -->
+
+    <link rel="icon" href="assets/img/brand/logo_tree.png" type="image/png">
     <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
-    <!-- Quick CSS -->
     <link rel="stylesheet" href="assets/css/quick-website.css" id="stylesheet">
 </head>
 
 <body>
-    <!-- Preloader -->
+
     <div class="preloader">
         <div class="spinner-border text-primary" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
-    <div class="modal fade" tabindex="-1" role="dialog" id="modal-cookies" data-backdrop="false" aria-labelledby="modal-cookies" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-aside left-4 right-4 bottom-4">
-            <div class="modal-content bg-dark-dark">
-                <div class="modal-body">
-                    <!-- Text -->
-                    <p class="text-sm text-white mb-3">
-                        We use cookies so that our themes work for you. By using our website, you agree to our use of cookies.
-                    </p>
-                    <!-- Buttons -->
-                    <a href="pages/utility/terms.html" class="btn btn-sm btn-white" target="_blank">Learn more</a>
-                    <button type="button" class="btn btn-sm btn-primary mr-2" data-dismiss="modal">OK</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Navbar -->
+
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
-            <!-- Brand -->
             <a class="navbar-brand" href="index.html">
-                <img alt="Image placeholder" src="assets/img/brand/logo_tree.png" id="navbar-logo">
+                <img alt="Logo" src="assets/img/brand/logo_tree.png" id="navbar-logo">
             </a>
-            <!-- Toggler -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- Collapse -->
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mt-4 mt-lg-0 ml-auto">
-                    <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
-                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Life of me</a>
-                        <div class="dropdown-menu dropdown-menu-single">
-                            <a href="index.html" class="dropdown-item">Homepage</a>
-                            <a href="#accomplishment-section" class="dropdown-item">Acomplishments</a>
-                            <a href="#personalities-section" class="dropdown-item">Personalities & Advantages</a>
-                            <a href="#vision-section" class="dropdown-item">My vision</a>
-                        </div>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="projects.html">Professional Skills of me</a>
-                    </li>
+                <ul class="navbar-nav ml-auto mt-4 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Life of me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Professional Skills of me</a></li>
                 </ul>
-                <!-- Button -->
-                <a class="navbar-btn btn btn-sm badge-soft-success d-none d-lg-inline-block ml-3" href="contact.html">
-                    Contact Me !
-                </a>
-                <!-- Mobile button -->
-                <div class="d-lg-none text-center">
+                <a class="navbar-btn btn btn-sm badge-soft-success d-none d-lg-inline-block ml-3" href="contact.html">Contact Me !</a>
+                <div class="d-lg-none text-center mt-2">
                     <a href="contact.html" class="btn btn-block btn-sm btn-warning">Contact Me !</a>
                 </div>
             </div>
         </div>
     </nav>
-    <!-- Main content -->
-    <section class="slice py-7">
+
+    <section class="slice py-8 bg-section-secondary">
         <div class="container">
-            <div class="row row-grid align-items-center">
-                <div class="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5">
-                    <!-- Heading -->
-                    <h1 class="display-4 text-center text-md-left mb-3">
-                        Hello ! I'm  <br> <strong class="text-success">Jaclyn Chiang</strong>
-                    </h1>
-                    <!-- Text -->
-                    <p class="lead text-center text-md-left text-muted">
-                        A proactive and outgoing challenge seeker with a strong passion for learning.
-                    </p>
-                    <!-- Buttons
-                    <div class="text-center text-md-left mt-5">
-                        <a href="https://webpixels.io/themes/quick-free-bootstrap-theme" class="btn btn-primary btn-icon" target="_blank">
-                            <span class="btn-inner--text">Get started</span>
-                            <span class="btn-inner--icon"><i data-feather="chevron-right"></i></span>
-                        </a>
-                        <a href="https://webpixels.io/illustrations" class="btn btn-neutral btn-icon d-none d-lg-inline-block" target="_blank">See Illustrations</a>
-                    </div> -->
-                </div>
-                <div class="col-12 col-md-5 col-lg-6 order-md-2 text-center">
-                    <!-- Image -->
-                    <figure class="w-100">
-                        <!-- <img alt="Image placeholder" src="assets/img/svg/illustrations/illustration-3.svg" class="img-fluid mw-md-120"> -->
-                        <img alt="Image placeholder" src="assets/img/ChatGPT Image 2025年4月8日 下午08_00_16.png" class="img-fluid mw-md-myImg">
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="slice slice-lg pt-10 bg-gradient-success"  id="accomplishment-section">
-        <!-- SVG separator -->
-        <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
-            <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100;" xml:space="preserve" class="">
-                <polygon points="2560 0 2560 100 0 100"></polygon>
-            </svg>
-        </div>
-        <!-- Container -->
-        <div class="container">
-            <div class="row row-grid">
+            <div class="row justify-content-center mb-5 text-center">
                 <div class="col-lg-8">
-                    <!-- Badge -->
-                    <span class="badge badge-soft-success badge-pill">Accomplishments</span>
-                    <!-- Title -->
-                    <h3 class="my-2 text-white">Master of Information Management</h3>
-                    <!-- Text -->
-                    <p class="lead text-white-50 lh-120">
-                        National Taiwan University, Taipei, Taiwan
-                    </p>
-                    <!-- Title -->
-                    <h3 class="my-2 text-white">Bachelor of Management Information Systems</h3>
-                    <!-- Text -->
-                    <p class="lead text-white-50 lh-120">
-                        National Chengchi University, Taipei, Taiwan
+                    <h2>Contact Me</h2>
+                    <p class="lead lh-180 mt-3">Feel free to leave your message, I will get back to you as soon as possible. :)</p>
                 </div>
             </div>
-            <!-- Milestones -->
-            <div class="row mt-6">
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="card shadow-lg rounded-lg border-0 mb-sm-0">
-                                <div class="p-4 text-center text-sm-left">
-                                    <h3 class="mb-0">3.99</h3>
-                                    <p class="text-muted mb-0">
-                                        Graduate GPA <br> in NTU
-                                    </p>
-                                </div>
-                            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="name" placeholder="Your name" required>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="card shadow-lg rounded-lg border-0 mb-sm-0">
-                                <div class="p-4 text-center text-sm-left">
-                                    <h3 class="mb-0">930</h3>
-                                    <p class="text-muted mb-0">
-                                        TOEIC <br> Gold Certificate
-                                    </p>
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label for="email">Email <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="email" placeholder="your@email.com" required>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="card shadow-lg rounded-lg border-0 mb-sm-0">
-                                <div class="p-4 text-center text-sm-left">
-                                    <h3 class="mb-0">3rd</h3>
-                                    <p class="text-muted mb-0">
-                                        Highest <br> DEPT. Ranking
-                                    </p>
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="e.g. +886-912-345-678">
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Leave your message here"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success mt-3">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <div  id="personalities-section"></div>
-    <section class="slice slice-lg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <span class="badge badge-soft-success badge-pill">Personalities & Advantages</span>
-                    <h5 class="lh-180 mt-4 mb-6">An energetic and efficient team player with strong communication skills and a passion for continuous learning and growth.</h5>
-                </div>
-            </div>
-            <!-- Features -->
-            <div class="row mx-lg-n4">
-                <!-- Features - Col 1 -->
-                <div class="col-lg-4 col-md-6 px-lg-4">
-                    <div class="card shadow-none">
-                        <div class="p-3 d-flex">
-                            <div>
-                                <div class="icon icon-shape rounded-circle bg-warning text-white mr-4">
-                                    <i data-feather="check"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <span class="h6">Outgoing and enthusiastic</span>
-                                <!-- <p class="text-sm text-muted mb-0">
-                                    Built to be customized.
-                                </p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 px-lg-4">
-                    <div class="card shadow-none">
-                        <div class="p-3 d-flex">
-                            <div>
-                                <div class="icon icon-shape rounded-circle bg-primary text-white mr-4">
-                                    <i data-feather="check"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <span class="h6">Open to new challenges</span>
-                                <!-- <p class="text-sm text-muted mb-0">
-                                    Built to be customized.
-                                </p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 px-lg-4">
-                    <div class="card shadow-none">
-                        <div class="p-3 d-flex">
-                            <div>
-                                <div class="icon icon-shape rounded-circle bg-danger text-white mr-4">
-                                    <i data-feather="check"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <span class="h6">Responsible and reliable</span>
-                                <!-- <p class="text-sm text-muted mb-0">
-                                    Built to be customized.
-                                </p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 px-lg-4">
-                    <div class="card shadow-none">
-                        <div class="p-3 d-flex">
-                            <div>
-                                <div class="icon icon-shape rounded-circle bg-success text-white mr-4">
-                                    <i data-feather="check"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <span class="h6">Efficient and organized</span>
-                                <!-- <p class="text-sm text-muted mb-0">
-                                    Built to be customized.
-                                </p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 px-lg-4">
-                    <div class="card shadow-none">
-                        <div class="p-3 d-flex">
-                            <div>
-                                <div class="icon icon-shape rounded-circle bg-info text-white mr-4">
-                                    <i data-feather="check"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <span class="h6">Strong communication skills</span>
-                                <!-- <p class="text-sm text-muted mb-0">
-                                    Built to be customized.
-                                </p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 px-lg-4">
-                    <div class="card shadow-none">
-                        <div class="p-3 d-flex">
-                            <div>
-                                <div class="icon icon-shape rounded-circle bg-warning text-white mr-4">
-                                    <i data-feather="check"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <span class="h6">Optimistic and proactive</span>
-                                <!-- <p class="text-sm text-muted mb-0">
-                                    Built to be customized.
-                                </p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>   
-    <div  id="vision-section"></div>
-    <section class="slice slice-lg">
-        <div class="container">
-            <span class="badge badge-soft-success badge-pill">My vision</span>
-            <div class="row mt-4">
-                <div class="col-lg-6 pr-lg-5">
-                    <p class="h5 lh-180 mb-3">
-                        It's not just about work-life balance, but about work-life excellence.
-                    </p>
-                    <p class="h5 lh-180 mb-3">
-                        After all, Your heart knows the way.
-                    </p>
-                </div>
-                <div class="col-lg-6">
-                    <p class="lead lh-180">
-                        Throughout my journey of learning — full of both stumbles and growth — I’ve always seen myself as a seeker of challenges. Beyond mastering my professional skills, I actively explore diverse fields and embrace new experiences during my spare time. Through continuous learning, trying, failing, and succeeding, I aim to become a stronger version of myself. Ultimately, I hope to apply my knowledge and abilities to make a meaningful impact, both in my career and in life.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="slice slice-lg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-6">
-                    <img src="assets/img/self.jpg" alt="Image" class="rounded-lg img-fluid"/>
-                    <div class="text-right mt-4">
-                        <img src="assets/img/cat.jpg" alt="Image" class="rounded-lg img-fluid w-50" />
-                    </div>
-                </div>
-                <div class="col-lg-7 col-6">
-                    <img src="assets/img/snow2.jpg" alt="Image" class="rounded-lg img-fluid w-75 mt-5" />
-                    <div class="text-right mt-4">
-                        <img src="assets/img/bar.jpg" alt="Image" class="rounded-lg img-fluid" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <footer class="position-relative" id="footer-main">
         <div class="footer pt-lg-7 bg-light">
-            <!-- SVG shape -->
             <div class="shape-container shape-line shape-position-top shape-orientation-inverse bg-light">
-                <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100;" xml:space="preserve" class=" fill-section-secondary">
+                <svg width="2560px" height="100px" viewBox="0 0 2560 100" preserveAspectRatio="none" class="fill-section-secondary">
                     <polygon points="2560 0 2560 100 0 100"></polygon>
                 </svg>
             </div>
-            <!-- Footer -->
-            <div class="container pt-4">
-                <!-- <hr class="divider divider-fade divider-dark my-4"> -->
-                <!-- <div class="row align-items-center justify-content-md-between pb-4">
-                    <div class="col-md-6">
-                        <div class="copyright text-sm font-weight-bold text-center text-md-left">
-                            &copy; 2020 <a href="https://webpixels.io" class="font-weight-bold" target="_blank">Webpixels</a>. All rights reserved
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Terms
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Privacy
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Cookies
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div> -->
-            </div>
+            <div class="container pt-4"></div>
         </div>
     </footer>
-    <!-- Core JS  -->
+
+    <!-- JavaScript -->
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/svg-injector/dist/svg-injector.min.js"></script>
     <script src="assets/libs/feather-icons/dist/feather.min.js"></script>
-    <!-- Quick JS -->
     <script src="assets/js/quick-website.js"></script>
-    <!-- Feather Icons -->
     <script>
-        feather.replace({
-            'width': '1em',
-            'height': '1em'
-        })
+        feather.replace({ width: '1em', height: '1em' });
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // 防止表單真的提交
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            if (!name || !email) {
+                alert('Please fill in the required fields.');
+            } else {
+                alert('Thank you for your message!');
+                this.reset();  // 清空表單
+            }
+        });
     </script>
 </body>
-
 </html>
